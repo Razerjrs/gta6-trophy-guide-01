@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap, missables, and a cited guide to each.">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<noscript><p class="noscript-note">Leonida Ledger needs JavaScript to load its trophy list — the list itself lives in <code>app/data/trophies.json</code>, which you can read directly.</p></noscript>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5</p>
+      <h1>Leonida Ledger</h1>
+      <p class="subtitle">The offline trophy guide &amp; tracker — every official trophy, a roadmap to the platinum, and a guide to each that cites its sources.</p>
+    </div>
+    <div class="platinum-card" id="platinumCard" aria-label="Platinum progress">
+      <p class="platinum-label">Platinum</p>
+      <p class="platinum-name">Vice Got a Price!</p>
+      <p class="platinum-count"><span id="earnedCount">0</span> / <span id="totalCount">55</span> earned</p>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <p class="platinum-pct"><span id="earnedPct">0%</span> of the way to the platinum</p>
+    </div>
+  </div>
+  <p class="list-makeup" id="listMakeup">55 trophies &middot; 1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 28 hidden on PlayStation until earned</p>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" class="tab is-active" data-view="checklist">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="missables">Missables</button>
+  <button type="button" class="tab" data-view="about">Sources &amp; honesty</button>
+</nav>
+
+<section class="controls" id="controls" aria-label="Tracker controls">
+  <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name, mission, keyword&hellip;" autocomplete="off"></label>
+  <div class="chip-row" id="kindChips" role="group" aria-label="Filter by kind">
+    <button type="button" class="chip is-active" data-kind="all">All kinds</button>
+    <button type="button" class="chip" data-kind="story">Story</button>
+    <button type="button" class="chip" data-kind="missable">Missable</button>
+    <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+    <button type="button" class="chip" data-kind="activities">Activities</button>
+    <button type="button" class="chip" data-kind="online">Online</button>
+  </div>
+  <div class="control-row">
+    <label>Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Status
+      <select id="statusFilter">
+        <option value="all">All</option>
+        <option value="earned">Earned</option>
+        <option value="remaining">Still to earn</option>
+      </select>
+    </label>
+    <label class="toggle"><input id="spoilerToggle" type="checkbox"> Hide story spoilers until earned</label>
+    <span class="spacer"></span>
+    <button type="button" id="exportBtn">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button type="button" id="resetBtn" class="danger">Reset</button>
+  </div>
+  <p class="counters" id="counters" aria-live="polite"></p>
+</section>
+
+<main class="layout">
+  <section class="panel" id="mainPanel" aria-label="Trophy list">
+    <ol class="trophy-list" id="trophyList"></ol>
+    <p class="empty-note" id="emptyNote" hidden>No trophies match these filters. Try clearing the search or picking another kind.</p>
+  </section>
+  <aside class="panel detail" id="detailPanel" aria-label="Trophy guide"></aside>
+</main>
+
+<section class="panel view-page" id="roadmapPage" hidden aria-label="Roadmap to the platinum"></section>
+<section class="panel view-page" id="missablesPage" hidden aria-label="Missable trophies"></section>
+<section class="panel view-page" id="aboutPage" hidden aria-label="Sources and honesty"></section>
+
+<footer class="footnote">
+  <p>Leonida Ledger is an unofficial fan guide. It is not affiliated with Rockstar Games, and it shows no Rockstar logo or official artwork. Trophy names and descriptions are shown as PlayStation publishes them; every guide is written for this page, in our own words, from the official description, and says plainly where a place or a step is not pinned down. The guide works fully offline — it loads nothing from the network.</p>
+  <p>Progress is saved in this browser only (localStorage). Export it to keep a copy, and import it back on any device.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
